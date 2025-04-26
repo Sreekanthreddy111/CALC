@@ -1,0 +1,45 @@
+let CounterElement=document.getElementById("counterValue");
+function Increment()
+{
+    let previousvalue=CounterElement.textContent;
+    let updatevalue=parseInt(previousvalue)+1;
+    if(updatevalue>0)
+    {
+        CounterElement.style.color="green";
+    }
+    else if(updatevalue<0)
+    {
+        CounterElement.style.color= "red";
+    }
+      else
+    {
+       CounterElement.style.color="black";  
+    }
+   
+    CounterElement.textContent= updatevalue;
+    
+}
+function Decrement()
+{
+    let previousvalue=CounterElement.textContent;
+    let updatevalue=parseInt(previousvalue)-1;
+    CounterElement.textContent= updatevalue;
+      if(updatevalue>0)
+    {
+        CounterElement.style.color="green";
+    }
+    else if(updatevalue<0)
+    {
+        CounterElement.style.color="red";
+    }
+    else
+    {
+       CounterElement.style.color="black";  
+    }
+}
+function Reset()
+{
+    let updatevalue=0
+    CounterElement.textContent= updatevalue;
+    CounterElement.style.color="black"; 
+}
